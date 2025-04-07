@@ -21,9 +21,9 @@ export const Piechart = ({ chartData }) => {
     value: 15 - formattedData[0].value,
   };
   formattedData = formattedData.slice(0, 2);
-  console.log(formattedData);
+
   return (
-    <div className="h-full p-6 rounded-lg border-2 border-[#E9EBED]  w-md mt-12">
+    <div className="h-full p-6 rounded-lg border-2 border-[#E9EBED]  lg:w-md md:w-1/2 mt-12">
       <h2 className="font-bold text-black py-4">Question Analysis</h2>
       <p>
         <span className="font-bold">You scored 12 Question out of 15.</span>{" "}

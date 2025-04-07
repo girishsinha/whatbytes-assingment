@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className="w-1/6 border-[#E9EBED] border-r-2 h-screen bg-white flex flex-col pt-36 py-2 pl-2">
+    <div className="md:w-1/6 fixed md:static hidden  border-[#E9EBED] border-r-2 h-screen bg-white md:flex flex-col pt-36 py-2 pl-2">
       <nav className="flex flex-col space-y-4">
         <SidebarItem label="Dashboard" path="/" />
 

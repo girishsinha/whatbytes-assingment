@@ -18,15 +18,16 @@ export default function HomePage() {
   const [chartData, setChartData] = useState(initialData);
 
   return (
-    <div className="flex justify-around p-8 pl-10 mt-18">
+    <div className="flex lg:flex-row flex-col justify-around p-8 pl-10 mt-18">
       <div className="flex flex-col gap-6">
         <h3 className="">Skill Test</h3>
-        <div className="w-2xl p-6 rounded-lg border-2 border-[#E9EBED] flex justify-between items-center">
-          <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1" className="aspect-square" />
-          <div><h3 className="font-bold text-black">Hyper Text Markup Language</h3><p>Question: 8 | Duration: 15 mins| Submitted on 5 June 2021</p></div>
+        <div className="md:w-2xl p-6 rounded-lg border-2 border-[#E9EBED] flex sm:flex-row flex-col justify-between sm:gap-0 gap-2 md:items-center">
+          <div className="flex"><img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1" className="aspect-square" />
+            <div><h3 className="font-bold text-black">Hyper Text Markup Language</h3><p>Question: 8 | Duration: 15 mins| Submitted on 5 June 2021</p></div>
+          </div>
           <button className="bg-[#132278] rounded-md ring-black ring-2 px-6 h-10 text-sm font-semibold text-white" onClick={() => setIsModalOpen(true)}>Update</button>
         </div>
-        <div className="w-2xl p-6 rounded-lg border-2 border-[#E9EBED] flex flex-col">
+        <div className="md:w-2xl p-6 rounded-lg border-2 border-[#E9EBED] flex flex-col">
           <h3 className="font-bold text-black">Quick Statistics</h3>
           <div className="flex justify-around">
             <div className=" p-2 px-4">
@@ -46,7 +47,7 @@ export default function HomePage() {
 
           </div>
         </div>
-        <div className="p-6 rounded-lg border-2 border-[#E9EBED] w-2xl">
+        <div className="p-6 rounded-lg border-2 border-[#E9EBED] md:w-2xl">
           <h2 className="font-bold text-black py-4">Comparison Graph</h2>
           <p>
             <span className="font-bold">  You scored {chartData.percentile}% percentile</span> which is lower than the avarage percentile 72% of all the engineers who took this assessment
@@ -54,8 +55,8 @@ export default function HomePage() {
           <Graph />
         </div>
       </div>
-      <div className="h-full">
-        <div className="p-6 rounded-lg border-2 border-[#E9EBED]  w-md mt-12">
+      <div className="h-full flex lg:flex-col gap-0.5 md:flex-row flex-col">
+        <div className="p-6 rounded-lg border-2 border-[#E9EBED] md:w-1/2 lg:w-md mt-12">
           <h3 className="font-bold text-black py-4">Syllabus Wise Analysis</h3>
           <Chart />
 

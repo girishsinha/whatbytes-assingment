@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <div className="flex">
           <Sidebar />
-          <div className="w-5/6">
+          <div className="md:w-5/6">
             {children}
           </div>
         </div>
